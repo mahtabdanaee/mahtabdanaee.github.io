@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Satender Gunwal — Academic Homepage</title>
+  <meta name="description" content="Academic homepage of Satender Gunwal: background, research, teaching, and talks." />
+  <style>
+    /* :root{
+      --text:#111;
+      --muted:#555;
+      --border:#e8e8e8;
+      --link:#0b57d0;
+      --bg:#fff;
+      --card:#fafafa;
+    } */
+    :root{
+      /* --bg: #f6f5f3;          /*warm paper background */
+      /* --card: #ffffff;       /*clean cards */
+      --bg: #f3f4f6;
+      --card: #fdfdfd;
+      --text: #1f2933;       /* soft charcoal */
+      --muted: #5f6c7b;      /* calm slate gray */
+      --border: #e2e4e8;     /* subtle separators */
+      --link: #3b5ccc;       /* muted academic blue */
+      --accent: #e8ebf5;     /* soft highlight */
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.55;
+      color:var(--text);
+      background:var(--bg);
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:900px; margin:0 auto; padding:48px 20px}
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+    .title{min-width:260px; flex:1}
+    h1{margin:0 0 6px; font-size:2rem; letter-spacing:-0.02em}
+    .sub{margin:0; color:var(--muted)}
+    .links{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px}
+    .pill{
+      display:inline-block;
+      padding:6px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:#fff;
+      font-size:0.95rem;
+      color:#222;
+    }
+
+    /* Profile photo */
+    .header-right{flex-shrink:0}
+    .profile-photo{
+      width:140px;
+      height:140px;
+      object-fit:cover;
+      border-radius:50%;
+      border:1px solid var(--border);
+      background:#fff;
+      display:block;
+    }
+    @media (max-width: 520px){
+      .profile-photo{width:120px; height:120px}
+    }
+
+    /* Tab bar (single line, your “lower line” format) */
+    .tabbar{
+      margin-top:26px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      border-bottom:1px solid var(--border);
+      padding-bottom:10px;
+    }
+    .tab{
+      appearance:none;
+      border:1px solid var(--border);
+      background:#fff;
+      padding:8px 12px;
+      border-radius:10px;
+      font-size:0.98rem;
+      color:#222;
+      cursor:pointer;
+    }
+    .tab:hover{border-color:#cfcfcf}
+    .tab.is-active{
+                  background: var(--accent);
+                  border-color: #cfd5ea;
+                  font-weight: 650;
+                }
+    /* .tab.is-active{
+      border-color:#bdbdbd;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+      font-weight:650;
+    } */
+
+    /* Panels */
+    .tab-panel{display:none; margin-top:22px}
+    .tab-panel.is-active{display:block}
+
+    /* Layout primitives */
+    h2{margin:0 0 12px; font-size:1.25rem}
+    h3{margin:0 0 10px; font-size:1.05rem}
+    p{margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .card{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px 16px;
+      background:var(--card);
+    }
+    .grid{display:grid; grid-template-columns:1fr; gap:12px}
+    @media (min-width: 860px){
+      .grid{grid-template-columns: 1fr 1fr}
+    }
+    .stack{display:grid; gap:12px}
+    .two-col{display:grid; grid-template-columns:1fr; gap:12px}
+    @media (min-width: 860px){
+      .two-col{grid-template-columns: 1.1fr 0.9fr}
+    }
+
+    .item-title{font-weight:650}
+    .meta{color:var(--muted); font-size:0.95rem; margin-top:4px}
+    .actions{margin-top:10px; display:flex; flex-wrap:wrap; gap:10px}
+    .actions a{font-size:0.95rem}
+
+    ul{margin:0; padding-left:18px}
+    li{margin:8px 0}
+
+    /* Teaching blocks */
+    .course{
+      display:grid;
+      gap:6px;
+    }
+    .course-top{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:baseline;
+      justify-content:space-between;
+    }
+    .badge{
+      display:inline-block;
+      padding:2px 8px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      background:#fff;
+      color:#222;
+      font-size:0.85rem;
+    }
+
+    footer{
+      margin-top:46px;
+      padding-top:14px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:0.95rem
+    }
+    .kicker{font-size:0.95rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em}
+
+    /* Small quality-of-life */
+    .section{
+      margin-top:14px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header>
+      <div class="title">
+        <div class="kicker">Academic Homepage</div>
+        <h1>Mahtab Danaei</h1>
+        <p class="sub">PhD Student · Information and Decision Sciences · University of Illinois Chicago</p>
+
+        <div class="links">
+          <a class="pill" href="mailto:mraei@uic.edu">mraei@uic.edu</a>
+          <!-- <a class="pill" href="assets/cv/satender_cv2.pdf" target="_blank" rel="noopener">CV (PDF)</a> -->
+          <!-- <a class="pill" href="https://scholar.google.com/citations?user=XlxyyfsAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> -->
+          <a class="pill" href="https://github.com/mahtabdanaee" target="_blank" rel="noopener">GitHub</a>
+          <a class="pill" href="https://www.linkedin.com/in/mahtab-danaee-a2678a201/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <img src="assets/images/profile.jpg" alt="Mahtab Danaei" class="profile-photo" />
+      </div>
+    </header>
+
+    <!-- Single-line tab toggle -->
+    <div class="tabbar" role="tablist" aria-label="Primary sections">
+      <button class="tab is-active" role="tab" aria-selected="true" aria-controls="tab-home" data-tab="tab-home">Home</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-research" data-tab="tab-research">Research</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-teaching" data-tab="tab-teaching">Teaching</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-talks" data-tab="tab-talks">Talks</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-cv" data-tab="tab-cv">Curriculum Vitae</button>
+    </div>
+
+    <!-- HOME -->
+    <section id="tab-home" class="tab-panel is-active" role="tabpanel" tabindex="0">
+      <div class="stack">
+
+        <!-- Box 1: Background/Bio text + Research Interests at the end (no main heading) -->
+        <div class="card">
+          <p style="margin-top:0">
+            I am a PhD student in the Information and Decision Sciences department at the College of Business Administration, University of Illinois Chicago, advised by
+            <a href="https://www.selva-nadarajah.com/" target="_blank" rel="noopener">Professor Selvaprabu Nadarajah</a>.
+            My research focuses on decision-centric AI and optimization for modernizing the electric grid and other
+            high-stakes systems, where uncertainty, long planning horizons, and institutional constraints limit the
+            effectiveness of traditional approaches. My current work emphasizes spatial reliability aware power
+            system planning, the grid impacts of emerging demand such as large-scale data centers, and learning-augmented
+            methods that translate complex data and simulations into actionable planning insights.
+          </p>
+      
+          <p style="margin-top:8px">
+            Prior to joining UIC, I worked as a pre-doctoral research associate at the Indian Institute of Management
+            Ahmedabad, India, advised by
+            <a href="https://faculty.iima.ac.in/asinha/" target="_blank" rel="noopener">Professor Ankur Sinha</a>.
+            There, my research focused on bilevel optimization formulations for hyperparameter optimization in machine learning.
+          </p>
+        
+          <div class="section"></div>
+        
+          <h3 style="margin:0 0 8px">Research Interests</h3>
+          <p style="margin-top:0">
+            Keywords: Decision-centric AI, Reliable Power Systems Planning, Planning under Uncertainty, Sustainability Analytics
+          </p>
+        
+          <p>
+            <strong>Learning-augmented optimization for infrastructure and energy systems.</strong>
+            I develop optimization frameworks for long-term generation and transmission planning that incorporate
+            data-driven reliability signals while remaining computationally tractable. My work focuses on
+            spatial reliability-aware power systems planning, the integration of machine learning surrogates
+            into planning models, and evaluating the grid impacts of emerging large-scale demand such as data centers.
+          </p>
+        
+          <p>
+            <strong>Decision-centric AI for sustainability and policy planning.</strong>
+            I study how machine learning and large language models can support sustainability decision-making in
+            public-sector and resource-constrained settings. This includes developing frameworks to structure,
+            benchmark, and compare municipal sustainability plans, enabling peer learning, financing insights,
+            and scalable pathways from local action to global sustainability goals.
+          </p>
+        
+          <!-- <p style="margin-bottom:0">
+            <strong>Sequential decision-making with sparse or delayed feedback.</strong>
+            I investigate learning and optimization methods for sequential decision problems where rewards are sparse,
+            delayed, or expensive to observe. My work explores decision transformer-based approaches and approximation methods
+            that bridge reinforcement learning and optimization, with an emphasis on decision-compatible policies
+            that can be deployed in real-world planning and control settings.
+          </p> -->
+        </div>        
+    </section>
+
+
+    <!-- RESEARCH -->
+    <section id="tab-research" class="tab-panel" role="tabpanel" tabindex="0">
+      <div class="stack">
+        
+
+        <div class="card">
+          <h2>Working Papers</h2>
+
+          <div class="item-title">Learning-Augmented Power System Expansion Planning for Spatial Reliability</div>
+          <div class="meta">Satender Gunwal · Selvaprabu Nadarajah · Todd Levin — Status: In preparation for submission to <b>Operations Research</b></div>
+          <p style="margin-top:10px">
+            We study long-term generation and transmission expansion planning where deterministic investment models are evaluated ex post
+            for probabilistic resource adequacy, a practice that can overlook spatial reliability. We show that a machine learning–based
+            reliability feedback can uncover expansion plans that dramatically reduce outages and rebalance reliability across regions
+            at minimal additional cost, without introducing stochastic planning complexity.
+          </p>
+          <!-- Optional links area (add when you have them) -->
+          <!--
+          <div class="actions">
+            <a href="#" target="_blank" rel="noopener">Preprint</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+          -->
+        </div>
+
+        <div class="card">
+          <h2>Published Papers</h2>
+
+          <div class="item-title">A Linear Programming-Based Hyper Local Search for Tuning Hyperparameters</div>
+          <div class="meta">
+            Ankur Sinha · Satender Gunwal<br/>
+            <em>Operations Research Letters</em>, Volume 61, July 2025, Article 107287
+          </div>
+          <p style="margin-top:10px">
+            We propose a linear programming–based “hyper local search” method for hyperparameter tuning.
+            By formulating hyperparameter optimization as a bilevel program, the approach identifies a local descent direction
+            to improve validation loss and simultaneously fine-tunes continuous hyperparameters and model parameters near an initial trained model.
+            We demonstrate the approach across regression, machine learning, and deep learning tasks.
+          </p>
+          <div class="actions">
+            <a href="https://doi.org/10.1016/j.orl.2025.107287" target="_blank" rel="noopener">DOI</a>
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167637725000483" target="_blank" rel="noopener">ScienceDirect</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Work In-Progress</h2>
+
+          <div class="item-title">
+            Value-Based Best-in-Class Water Management Decisions for Hyperscale Data Centers
+          </div>
+          <div class="meta">
+            Arman Aminipanah · Lisa Bonnett · Satender Gunwal · Selvaprabu Nadarajah — Status: Work in progress
+          </div>
+          <p style="margin-top:10px">
+            This project develops a value-based framework for evaluating water use at hyperscale data centers by
+            linking regional hydrology, infrastructure constraints, and operational decisions to the opportunity
+            cost of water use. We introduce a value-adjusted water footprint metric and a decision-factor mapping
+            to identify best-in-class water management practices and benchmark current industry performance across
+            Midwestern regions.
+          </p>
+
+          <div class="item-title">
+            CLEAN In The Americas: Start Local, Unlock Financing, and Leverage Technology to Bridge Local Action and Global Goals
+          </div>
+          <div class="meta">
+            Satender Gunwal · Selvaprabu Nadarajah · Collaborators — Status: Work in progress
+          </div>
+          <p style="margin-top:10px">
+            This project studies how AI-enabled analytics and large language models can be used to structure,
+            benchmark, and compare municipal sustainability plans across regions. The objective is to support
+            data-driven peer learning, identify financing and policy gaps, and enable scalable pathways from
+            local environmental action to global sustainability goals.
+          </p>
+
+          <div class="item-title">
+            Corporate Nature &amp; Biodiversity Reporting in CDP Disclosures: A Large Language Model Study
+          </div>
+          <div class="meta">
+            Mahtab Danaee · Satender Gunwal · Selvaprabu Nadarajah — Status: Work in progress
+          </div>
+          <p style="margin-top:10px">
+            This project uses large language models to analyze corporate nature- and biodiversity-related
+            disclosures in the CDP questionnaire. The objective is to systematically classify goals,
+            commitments, and targets, assess alignment with material impacts and dependencies using
+            ENCORE and Global Biodiversity Framework (GBF) categories, and identify sector-level reporting
+            patterns and gaps. The analysis aims to benchmark common practices, highlight opportunities
+            to improve measurability and time-bound target setting, and support data-driven guidance for
+            companies advancing nature-related disclosure and target-setting practices.
+          </p>
+          <!-- Optional links area (add when you have them) -->
+          <!--
+          <div class="actions">
+            <a href="#" target="_blank" rel="noopener">Project page</a>
+            <a href="#" target="_blank" rel="noopener">Data</a>
+          </div>
+          -->
+          
+          
+          <!-- Optional links area (add when you have them) -->
+          <!--
+          <div class="actions">
+            <a href="#" target="_blank" rel="noopener">Project page</a>
+          </div>
+          -->
+
+          <!-- <div class="item-title">
+            Decision Transformers for Sparse-Reward Games
+          </div>
+          
+          <div class="meta">
+            Mahtab Danaee · Satender Gunwal · Selvaprabu Nadarajah — Status: Work in progress
+          </div>
+          
+          <p style="margin-top:10px">
+            This project studies the use of decision transformers for sequential decision problems with sparse
+            and delayed rewards. Using a grid-based target-reaching environment, we evaluate how state
+            representations and reward shaping affect policy learning, and compare transformer-based
+            approaches against behavior cloning in offline reinforcement learning settings.
+          </p>
+          <!-- Optional links area (add when you have them) -->
+          <!--
+          <div class="actions">
+            <a href="#" target="_blank" rel="noopener">Preprint</a>
+          </div>
+          -->          
+        </div>        
+    </section>
+
+    <section id="tab-teaching" class="tab-panel" role="tabpanel" tabindex="0">
+      <div class="stack">
+        <div class="card">
+          <h2>Teaching</h2>
+    
+          <!-- Course development bullet -->
+          <ul style="margin-top:8px; margin-bottom:16px; padding-left:20px">
+            <li>
+              <strong>Course Development Assistant</strong> (with <a href="https://www.selva-nadarajah.com/" target="_blank" rel="noopener">Professor Selvaprabu Nadarajah</a>):
+              Co-developed two courses at the University of Illinois Chicago —
+              <em>IDS 509: Foundations of Analytics and AI for Supply Chain and Operations Management</em>
+              and
+              <em>IDS 494: Data-Driven Decisions for Sustainable Business</em>.
+            </li>
+          </ul>
+    
+          <table style="width:100%; border-collapse:collapse; margin-top:12px">
+            <thead>
+              <tr style="text-align:left">
+                <th style="padding:10px 8px; border-bottom:1px solid #e5e7eb">Role</th>
+                <th style="padding:10px 8px; border-bottom:1px solid #e5e7eb">Course</th>
+                <th style="padding:10px 8px; border-bottom:1px solid #e5e7eb">Institution</th>
+                <th style="padding:10px 8px; border-bottom:1px solid #e5e7eb">Term(s)</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr>
+                <td style="padding:10px 8px">Teaching Assistant</td>
+                <td style="padding:10px 8px">
+                  IDS 509: Foundations of Analytics and AI for Supply Chain and Operations Management
+                </td>
+                <td style="padding:10px 8px">University of Illinois Chicago</td>
+                <td style="padding:10px 8px">Fall 2024, Spring 2025</td>
+              </tr>
+    
+              <tr>
+                <td style="padding:10px 8px">Teaching Assistant</td>
+                <td style="padding:10px 8px">
+                  IDS 494: Data-Driven Decisions for Sustainable Business
+                </td>
+                <td style="padding:10px 8px">University of Illinois Chicago</td>
+                <td style="padding:10px 8px">Fall 2024, Spring 2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TALKS -->
+    <section id="tab-talks" class="tab-panel" role="tabpanel" tabindex="0">
+      <div class="stack">
+        <div class="card">
+          <h2>Invited Talks</h2>
+
+          <!-- Project / Paper block -->
+          <div class="item-title" style="margin-top:10px">
+            Learning-Augmented Power System Expansion Planning for Spatial Reliability
+          </div>
+          <ul style="margin:8px 0 0 18px">
+            <li>
+              Commodity and Energy Markets Association <a href="https://business.rice.edu/cema" target="_blank" rel="noopener">(CEMA)</a> Annual Meeting, Houston, TX <span class="muted">· 2025</span>
+            </li>
+            <li>
+              <a href="https://meetings.informs.org/wordpress/annual/" target="_blank" rel="noopener">INFORMS</a> Annual Meeting, ENRE Electricity, Atlanta, GA <span class="muted">· 2025</span>
+              <!-- Optional: <a href="#" target="_blank" rel="noopener">Slides</a> -->
+            </li>
+          </ul>
+
+          <!-- Project / Paper block -->
+          <div class="item-title" style="margin-top:16px">
+            CLEAN in the Americas: Start Local, Unlock Financing, and Leverage Technology to Bridge Local Action and Global Goals
+          </div>
+          <ul style="margin:8px 0 0 18px">
+            <li>
+              Sustainability Research and Innovation <a href="https://sricongress.org/" target="_blank" rel="noopener">(SRI)</a>  Congress (Workshop Session), Chicago, IL <span class="muted">· 2025</span>
+              <!-- Optional: <a href="#" target="_blank" rel="noopener">Slides</a> -->
+            </li>
+          </ul>
+
+            <!-- Project / Paper block -->
+          <div class="item-title" style="margin-top:16px">
+            Corporate Nature &amp; Biodiversity Reporting in CDP Disclosures: A Large Language Model Study
+          </div>
+          <ul style="margin:8px 0 0 18px">
+            <li>
+              Biodiversity + Nature in Energy and Transportation <a href="https://rightofway.erc.uic.edu/bneat/" target="_blank" rel="noopener">(BNEAT)</a> Meeting, Chesterton, IN
+              <span class="muted">· 2025</span>
+            </li>
+          </ul>
+
+
+          <!-- Optional: If you still want service, keep it simple and separate -->
+          <!-- <div class="section"></div>
+          <div class="item-title">Service</div>
+          <ul style="margin:8px 0 0 18px">
+            <li>
+              INFORMS — Session Chair, [Conference/Track], [City] <span class="muted">· 2025</span>
+            </li>
+          </ul>
+          </div>
+          </div> -->
+    </section>
+
+
+    <!-- CURRICULUM VITAE -->
+    <section id="tab-cv" class="tab-panel" role="tabpanel" tabindex="0">
+      <div class="stack">
+        <div class="card">
+          <h2>Curriculum Vitae</h2>
+          <p class="muted" style="margin-top:0">
+            If the embed doesn’t load in your browser, use the download link.
+          </p>
+          <div class="actions">
+            <a href="assets/cv/satender_cv2.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+            <a href="assets/cv/satender_cv2.pdf" download>Download</a>
+          </div>
+        </div>
+
+        <div class="card" style="padding:0; overflow:hidden">
+          <!-- Best compatibility: use <object>. If it fails, fallback link shows. -->
+          <object
+            data="assets/cv/satender_cv2.pdf"
+            type="application/pdf"
+            width="100%"
+            height="900"
+            style="display:block; border:0"
+          >
+            <p style="padding:14px 16px; margin:0">
+              Your browser can’t display PDFs inline.
+              <a href="assets/cv/satender_cv2.pdf" target="_blank" rel="noopener">Open the PDF</a>.
+            </p>
+          </object>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>Last updated: <span id="last-updated"></span></div>
+    </footer>
+  </main>
+
+  <script>
+    // Auto-stamp today's date (YYYY-MM-DD)
+    document.getElementById("last-updated").textContent =
+      new Date().toISOString().slice(0, 10);
+
+    // Tabs: toggle behavior
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".tab-panel");
+
+    function activateTab(tab) {
+      const target = tab.getAttribute("data-tab");
+
+      tabs.forEach((t) => {
+        const isActive = t === tab;
+        t.classList.toggle("is-active", isActive);
+        t.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+
+      panels.forEach((panel) => {
+        const isActive = panel.id === target;
+        panel.classList.toggle("is-active", isActive);
+      });
+
+      // Move focus into active panel for accessibility
+      // const activePanel = document.getElementById(target);
+      // if (activePanel) activePanel.focus({ preventScroll: false });
+      // Optional: focus without scrolling
+      const activePanel = document.getElementById(target);
+      if (activePanel) activePanel.focus({ preventScroll: true });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => activateTab(tab));
+    });
+
+    // Optional: deep-link via hash (#home, #research, etc.)
+    // If you want this, use hashes like: #home #research #teaching #talks
+    const hashToTab = {
+      "#home": "tab-home",
+      "#research": "tab-research",
+      "#teaching": "tab-teaching",
+      "#talks": "tab-talks",
+      "#cv": "tab-cv"
+    };
+
+    function syncFromHash() {
+      const mapped = hashToTab[window.location.hash];
+      if (!mapped) return;
+      const tab = Array.from(tabs).find(t => t.getAttribute("data-tab") === mapped);
+      if (tab) activateTab(tab);
+    }
+
+    window.addEventListener("hashchange", syncFromHash);
+    syncFromHash();
+  </script>
+</body>
+</html>
