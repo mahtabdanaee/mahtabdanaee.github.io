@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Satender Gunwal — Academic Homepage</title>
-  <meta name="description" content="Academic homepage of Satender Gunwal: background, research, teaching, and talks." />
+  <title>Mahtab Danaei — Academic Homepage</title>
+  <meta name="description" content="Academic homepage of Mahtab Danaei: background, research, teaching, and talks." />
   <style>
     /* :root{
       --text:#111;
@@ -232,8 +232,7 @@
         
           <h3 style="margin:0 0 8px">Research Interests</h3>
           <p style="margin-top:0">
-            Keywords: Language Models as Human Simulators, Quantization of Reasoning Models and Calibration Data Structure, LLMs and SLMs for Efficient Organizational Deployment, Reliable Power Systems Planning, Planning under Uncertainty, Sustainability Analytics
-          </p>
+            Keywords: Large Language Models (LLMs), Small Language Models (SLMs), Human Decision Simulation, Model Quantization, Reinforcement Learning (RL)
         
           <p>
             <strong>Language Models as Human Simulators.</strong>
@@ -272,13 +271,14 @@
         <div class="card">
           <h2>Working Papers</h2>
 
-          <div class="item-title">Learning-Augmented Power System Expansion Planning for Spatial Reliability</div>
-          <div class="meta">Satender Gunwal · Selvaprabu Nadarajah · Todd Levin — Status: In preparation for submission to <b>Operations Research</b></div>
+          <div class="item-title">Modeling How People Think: Structured Deliberation to Improve Language Model Simulations of Human Decision Making</div>
+          <div class="meta">Mahtab Danaei · Selvaprabu Nadarajah · Daniel R. Jiang — Status: In progress </div>
           <p style="margin-top:10px">
-            We study long-term generation and transmission expansion planning where deterministic investment models are evaluated ex post
-            for probabilistic resource adequacy, a practice that can overlook spatial reliability. We show that a machine learning–based
-            reliability feedback can uncover expansion plans that dramatically reduce outages and rebalance reliability across regions
-            at minimal additional cost, without introducing stochastic planning complexity.
+            In this paper, we study how to improve the use of large language models as simulators of human decision-making under uncertainty. 
+            We show that matching human behavior requires modeling not just final choices, but the deliberative processes that generate them, 
+            processes that differ systematically across individuals and shape population-level decision distributions. 
+            We propose a theory-guided structured deliberation framework, grounded in decision science, and demonstrate that 
+            eliciting human-style deliberation from LLMs, improves their ability to reproduce human decision distributions. 
           </p>
           <!-- Optional links area (add when you have them) -->
           <!--
@@ -289,12 +289,32 @@
           -->
         </div>
 
-        <div class="card">
+          <div class="item-title">What Companies Say vs. What Matters: LLM Analysis of Biodiversity Disclosures in Oil and Gas</div>
+          <div class="meta">Mahtab Danaei · Satender Gunwal · Selvaprabu Nadarajah — Status: Pre-print SSRN </div>
+          <p style="margin-top:10px">
+            This project uses large language models to analyze corporate nature- and biodiversity-related
+            disclosures in the CDP questionnaire. The objective is to systematically classify goals,
+            commitments, and targets, assess alignment with material impacts and dependencies using
+            ENCORE and Global Biodiversity Framework (GBF) categories, and identify sector-level reporting
+            patterns and gaps. The analysis aims to benchmark common practices, highlight opportunities
+            to improve measurability and time-bound target setting, and support data-driven guidance for
+            companies advancing nature-related disclosure and target-setting practices.
+          </p>
+          <!-- Optional links area (add when you have them) -->
+          <!--
+          <div class="actions">
+            <a href="#" target="_blank" rel="noopener">Preprint</a>
+            <a href="#" target="_blank" rel="noopener">Code</a>
+          </div>
+          -->
+        </div>
+
+        <!-- <div class="card">
           <h2>Published Papers</h2>
 
           <div class="item-title">A Linear Programming-Based Hyper Local Search for Tuning Hyperparameters</div>
           <div class="meta">
-            Ankur Sinha · Satender Gunwal<br/>
+            Ankur Sinha · Mahtab Danaei<br/>
             <em>Operations Research Letters</em>, Volume 61, July 2025, Article 107287
           </div>
           <p style="margin-top:10px">
@@ -307,43 +327,41 @@
             <a href="https://doi.org/10.1016/j.orl.2025.107287" target="_blank" rel="noopener">DOI</a>
             <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167637725000483" target="_blank" rel="noopener">ScienceDirect</a>
           </div>
-        </div>
+        </div> -->
 
         <div class="card">
           <h2>Work In-Progress</h2>
 
           <div class="item-title">
-            Value-Based Best-in-Class Water Management Decisions for Hyperscale Data Centers
+            Local Decision Simulation with Quantized Reasoning models
           </div>
           <div class="meta">
-            Arman Aminipanah · Lisa Bonnett · Satender Gunwal · Selvaprabu Nadarajah — Status: Work in progress
+            Mahtab Danaei · Selvaprabu Nadarajah . Abhilash Chenreddy — Status: Work in progress
           </div>
           <p style="margin-top:10px">
-            This project develops a value-based framework for evaluating water use at hyperscale data centers by
-            linking regional hydrology, infrastructure constraints, and operational decisions to the opportunity
-            cost of water use. We introduce a value-adjusted water footprint metric and a decision-factor mapping
-            to identify best-in-class water management practices and benchmark current industry performance across
-            Midwestern regions.
+            In this paper, we study whether human-style structured deliberation traces can be used as calibration data to 
+            preserve reasoning behavior when quantizing reasoning models to very low precision (e.g., 2–3 bits), 
+            enabling more efficient yet behaviorally reliable small models.
           </p>
 
-          <div class="item-title">
+          <!-- <div class="item-title">
             CLEAN In The Americas: Start Local, Unlock Financing, and Leverage Technology to Bridge Local Action and Global Goals
           </div>
           <div class="meta">
-            Satender Gunwal · Selvaprabu Nadarajah · Collaborators — Status: Work in progress
+            Mahtab Danaei · Selvaprabu Nadarajah · Collaborators — Status: Work in progress
           </div>
           <p style="margin-top:10px">
             This project studies how AI-enabled analytics and large language models can be used to structure,
             benchmark, and compare municipal sustainability plans across regions. The objective is to support
             data-driven peer learning, identify financing and policy gaps, and enable scalable pathways from
             local environmental action to global sustainability goals.
-          </p>
-
+          </p> -->
+<!-- 
           <div class="item-title">
             Corporate Nature &amp; Biodiversity Reporting in CDP Disclosures: A Large Language Model Study
           </div>
           <div class="meta">
-            Mahtab Danaee · Satender Gunwal · Selvaprabu Nadarajah — Status: Work in progress
+            Mahtab Danaee · Mahtab Danaei · Selvaprabu Nadarajah — Status: Work in progress
           </div>
           <p style="margin-top:10px">
             This project uses large language models to analyze corporate nature- and biodiversity-related
@@ -353,7 +371,7 @@
             patterns and gaps. The analysis aims to benchmark common practices, highlight opportunities
             to improve measurability and time-bound target setting, and support data-driven guidance for
             companies advancing nature-related disclosure and target-setting practices.
-          </p>
+          </p> -->
           <!-- Optional links area (add when you have them) -->
           <!--
           <div class="actions">
@@ -375,7 +393,7 @@
           </div>
           
           <div class="meta">
-            Mahtab Danaee · Satender Gunwal · Selvaprabu Nadarajah — Status: Work in progress
+            Mahtab Danaee · Mahtab Danaei · Selvaprabu Nadarajah — Status: Work in progress
           </div>
           
           <p style="margin-top:10px">
